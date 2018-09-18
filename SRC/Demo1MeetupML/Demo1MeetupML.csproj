@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.CpuMath" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.HalLearners" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.LightGBM" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.Onnx" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.Parquet" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.TensorFlow" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="Microsoft.ML.TensorFlow.Redist" Version="0.6.0-preview-26912-3" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.6.0-preview1-26911-04" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="cifar_model\frozen_model2.pb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\banana.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\banana2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\banana3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\banana4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\hotdog.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\images.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\tomato.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\tomato2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\tomato3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="images\tomato4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="train.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="wikipedia-detox-250-line-data.tsv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="winemag-data-130k-v2.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+
+</Project>
